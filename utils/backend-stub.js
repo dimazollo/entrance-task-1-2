@@ -1,4 +1,4 @@
-const {generateData, generateDetails} = require('./generate-data')
+import {generateData, generateDetails} from './generate-data'
 
 const data = generateData()
 const cache = {}
@@ -14,7 +14,7 @@ exports.initBackendStub = function (app) {
     const details = cache[id] || (cache[id] = generateDetails(info))
 
     res.json({...info, ...details})
-
+    // TODO - return empty object?
     return {}
   })
 }

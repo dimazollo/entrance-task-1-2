@@ -1,5 +1,7 @@
-const PUBLIC_PATH = require('path').join(__dirname, 'public')
-const {initBackendStub} = require('./utils/backend-stub')
+import path from 'path'
+import {initBackendStub} from './utils/backend-stub'
+
+const PUBLIC_PATH = path.join(__dirname, 'public')
 
 module.exports = {
   mode: 'development',
@@ -10,7 +12,8 @@ module.exports = {
   },
   devServer: {
     contentBase: PUBLIC_PATH,
-    compress: true,
+    // FIXME: make it
+    compress: false,
     port: 9000,
     before: initBackendStub
   }

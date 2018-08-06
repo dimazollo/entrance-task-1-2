@@ -1,4 +1,4 @@
-const faker = require('faker')
+import faker from 'faker'
 
 function rand () {
   const rnd = Math.random() - 0.5
