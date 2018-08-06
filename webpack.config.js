@@ -1,7 +1,5 @@
-import path from 'path'
-import {initBackendStub} from './utils/backend-stub'
-
-const PUBLIC_PATH = path.join(__dirname, 'public')
+const PUBLIC_PATH = require('path').join(__dirname, 'public')
+const {initBackendStub} = require('./utils/backend-stub')
 
 module.exports = {
   mode: 'development',
