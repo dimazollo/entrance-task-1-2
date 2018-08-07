@@ -17,7 +17,7 @@ export function createFilterControl (ymaps) {
       filters: items.reduce((filters, item) => {
         filters[item.data.get('value')] = item.isSelected()
         return filters
-      }, {})
+      })
     }
   })
 
