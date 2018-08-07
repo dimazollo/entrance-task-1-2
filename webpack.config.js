@@ -4,6 +4,7 @@ const {initBackendStub} = require('./utils/backend-stub')
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
+  devtool: 'eval-source-map',
   output: {
     path: PUBLIC_PATH,
     filename: 'index.js'
